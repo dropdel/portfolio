@@ -13,11 +13,17 @@
 
     <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 192x192 pixels in size. -->
     <link rel="icon" href="./assets/images/icon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <title>Derrick Thornton</title>
   </head>
   <body>
-    <header>
+    <header class="frontPage">
       <img
         src="assets/images/icon.svg"
         alt="my website's icon, hexagon with a D in the middle."
@@ -29,12 +35,12 @@
         <div class="menu-button__burger"></div>
       </div>
       <div class="nav-menu ordinary">
-        <a>About Me</a>
-        <a>Portfolio</a>
-        <a>Contact</a>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </div>
     </header>
-    <section id="intro">
+    <section id="intro" class="frontPage">
       <article>
         <p class="exceptional">Hi, my name is</p>
         <p class="ordinary big-emphasis">Derrick Thornton</p>
@@ -50,9 +56,9 @@
           relevant to web development.
         </p>
       </article>
-      <a class="exceptional">Let's connect</a>
+      <a class="exceptional" href="#contact">Let's connect</a>
     </section>
-    <section>
+    <section id="about">
       <h2 class="ordinary big-emphasis">About me</h2>
       <article>
         <p>
@@ -63,34 +69,34 @@
           I really knew about was CSS/HTML, from the days of MySpace, and a
           smidgen of C++ and moderate knowledge of Python.)
         </p>
-        <p>
+        <img
+          src="assets/images/me.jpg"
+          height="100"
+          width="100"
+          alt="Photo of the author of the website, background color yellow"
+        />
+        <p class="exceptional justified">
           Other than coding, in my free time, I am currently learning the
           Russian language, reading about geopolitics and accessability design,
           and, sometimes, taking a break and playing Total War or Battlefield.
         </p>
-        <img
-          src="assets/images/me.jpg"
-          height="200"
-          width="200"
-          alt="Photo of the author of the website, background color yellow"
-        />
       </article>
       <article>
         <h2 class="ordinary big-emphasis">My Toolkit</h2>
-        <div>
+        <ul>
           <!-- Icons for JS, React, NodeJS, PostgreSQL, MySQL, PHP, SASS, WordPress -->
-          <span>JS (ES6+)</span>
-          <span>PostgreSQL</span>
-          <span>MySQL</span>
-          <span>NodeJS</span>
-          <span>React</span>
-          <span>WordPress</span>
-          <span>PHP</span>
-          <span>Sass/SCSS</span>
-        </div>
+          <li>JS (ES6+)</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>NodeJS</li>
+          <li>React</li>
+          <li>WordPress</li>
+          <li>PHP</li>
+          <li>Sass/SCSS</li>
+        </ul>
       </article>
     </section>
-    <section>
+    <section id="portfolio">
       <h2 class="ordinary big-emphasis">Noteworthy Projects</h2>
       <main>
         <!-- Flexbox organized rectangles, pointing to github and live version. Title, description and tools used.
@@ -98,14 +104,14 @@
         -->
       </main>
     </section>
-    <section>
+    <section id="contact">
       <h2 class="ordinary big-emphasis">Get in touch</h2>
       <div>
         <article>
           <p>Feel free to contact me and I'll be sure to reply very quickly.</p>
           <!-- font awesome icons to LinkedIn, telegram, github -->
         </article>
-        <article>
+        <article class="form-area">
           <form action="https://formspree.io/f/mvoddlgo" method="POST">
             <label for="name" class="hideEl">name</label>
             <input
@@ -127,7 +133,9 @@
             <textarea
               id="message"
               placeholder="type your message here"
+              required
             ></textarea>
+            <input id="submit" type="submit" value="Send Message" />
           </form>
         </article>
       </div>

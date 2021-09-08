@@ -12,3 +12,14 @@ menuButton.addEventListener("click", () => {
     menuOpen = false;
   }
 });
+
+const navMenuItem = document.querySelectorAll(".nav-menu a");
+for (let item of navMenuItem) {
+  item.addEventListener("click", () => {
+    resetButtonAndMenu();
+  });
+}
+function resetButtonAndMenu() {
+  menuButton.classList.remove("open");
+  navMenu.classList.remove("open");
+}
