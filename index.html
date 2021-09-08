@@ -13,11 +13,7 @@
 
     <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 192x192 pixels in size. -->
     <link rel="icon" href="./assets/images/icon.ico" />
-    <style>
-      .hideEl {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <title>Derrick Thornton</title>
   </head>
   <body>
@@ -28,23 +24,23 @@
         height="100"
         width="100"
       />
-      <div>
+      <div class="menu-button">
         <!-- Hamburger Menu -->
       </div>
-      <div>
+      <!-- <div>
         <a>About Me</a>
         <a>Portfolio</a>
         <a>Contact</a>
-      </div>
+      </div> -->
     </header>
-    <section>
+    <section id="intro">
       <article>
-        <p>Hi, my name is</p>
-        <p>Derrick Thornton</p>
-        <p>I develop things for the web.</p>
+        <p class="exceptional">Hi, my name is</p>
+        <p class="ordinary big-emphasis">Derrick Thornton</p>
+        <p class="unexceptional big-emphasis">I develop things for the web.</p>
       </article>
       <article>
-        <p>
+        <p class="ordinary">
           As a software engineer, I specialize in planning, designing and
           building exceptional software products, and offering my experience as
           a service. Currently, I'm intensely focused on building with WordPress
@@ -53,10 +49,10 @@
           relevant to web development.
         </p>
       </article>
-      <a>Let's connect</a>
+      <a class="exceptional">Let's connect</a>
     </section>
     <section>
-      <h2>About me</h2>
+      <h2 class="ordinary big-emphasis">About me</h2>
       <article>
         <p>
           Hello again! Let me tell you a little bit more about myself. So, my
@@ -79,7 +75,7 @@
         />
       </article>
       <article>
-        <h2>My Toolkit</h2>
+        <h2 class="ordinary big-emphasis">My Toolkit</h2>
         <div>
           <!-- Icons for JS, React, NodeJS, PostgreSQL, MySQL, PHP, SASS, WordPress -->
           <span>JS (ES6+)</span>
@@ -94,7 +90,7 @@
       </article>
     </section>
     <section>
-      <h2>Noteworthy Projects</h2>
+      <h2 class="ordinary big-emphasis">Noteworthy Projects</h2>
       <main>
         <!-- Flexbox organized rectangles, pointing to github and live version. Title, description and tools used.
              Background contains images from the project, but blurred and zoomed out maybe.
@@ -102,7 +98,7 @@
       </main>
     </section>
     <section>
-      <h2>Get in touch</h2>
+      <h2 class="ordinary big-emphasis">Get in touch</h2>
       <div>
         <article>
           <p>Feel free to contact me and I'll be sure to reply very quickly.</p>
@@ -135,5 +131,6 @@
         </article>
       </div>
     </section>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
